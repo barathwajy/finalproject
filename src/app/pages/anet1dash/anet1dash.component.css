@@ -1,0 +1,18 @@
+.container
+{
+    /* width: 500px;
+  height: 250px;
+  margin: 50px; */
+  /* outline: solid 1px black; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 8px 24px 8px 10px;
+  background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  appearance: none;
+
+  font-family: sans-serif;
+
+}

@@ -1,0 +1,87 @@
+<div class="row" >
+    <div class="container ">
+      <select class="" #region (change)= "onSelected(region.value)">
+
+        <option>Region A</option>
+        <option>Region B</option>
+        <option>Region C</option>
+        <option>Region D</option>
+        <option>Region E</option>
+        <option>Region F</option>
+        <option>Region G</option>
+
+      </select>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Average Bandwidth Usage</h4>
+
+          <canvas baseChart [type]= "'line'" [data]= "bandwidthData" [options]= "bandwidthOptions"></canvas>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Average Network Latency</h4>
+     
+          <canvas baseChart [type]= "'line'" [data]= "netlatencyData" [options]= "netlatencyOptions"></canvas>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Average Packet loss</h4>
+           
+            <canvas baseChart [type]= "'line'" [data]= "packetlossData" [options]= "packetlossOptions"></canvas>
+
+        </div>
+        </div>
+      </div>
+</div>
+
+<br>
+<div class="row">
+    <div class="col-lg-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Average Jitter</h4>
+        
+          <canvas baseChart [type]= "'line'" [data]= "jitterData" [options]= "jitterOptions"></canvas>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-4 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Average Bit Rate</h4>
+         
+          <canvas baseChart [type]= "'line'" [data]= "bitrateData" [options]= "bitrateOptions"></canvas>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title ">Average Call Setup Time</h4>
+          
+            <canvas baseChart [type]= "'line'" [data]= "callsetuptimeData" [options]= "callsetuptimeOptions"></canvas>
+
+        </div>
+        </div>
+      </div>
+</div>

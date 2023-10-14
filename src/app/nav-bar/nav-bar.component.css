@@ -1,0 +1,85 @@
+
+mat-toolbar {
+    background:#270331;
+    background-size:auto;
+    color: black;
+    
+  }
+  .texmat{
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    color: whitesmoke;
+          /* color: green; */
+  }
+  mat-sidenav {
+    margin: 5px;
+    width: 200px;
+    border-right: none;
+    background: #270331;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .example::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+  .content {
+    height: calc(100vh - 60px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+    flex: auto;
+    padding: 16px;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 1.0);
+  }
+  mat-sidenav-container {
+    height: calc(100vh - 65px);
+  }
+  .menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.5rem;
+    color: white;
+  }
+  .menu-button mat-icon {
+    margin-right: 8px;
+    color: white;
+  }
+  .avatar {
+    margin-top: 16px;
+    width: 10px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .name {
+    margin-top: 8px;
+    font-weight: small;
+  }
+  .designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color: lightgrey;
+  }
+  mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .menutextcolor{
+
+    color: white;
+  }

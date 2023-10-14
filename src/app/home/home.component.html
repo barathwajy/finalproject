@@ -1,0 +1,35 @@
+<header class="header">
+    <div class="login-section">
+        <!-- <a href="#" class="login-button">Login</a> -->
+        <!-- <a></a> -->
+        <button class="login-button" (click)="toggleLoginForm()">Login</button>
+        <div class="overlay" [style.display]="showLoginForm ? 'flex' : 'none'">
+
+            <app-newlog></app-newlog>
+        
+          </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="parallax-one">
+    <div class="hero-content">  
+        <h1>Welcome to the Telecomm Dashboard</h1>
+        <p>Efficiently manage your telecommunication network.</p>
+        <a routerLink="/login" class="cta-button">Get Started</a>
+        
+    </div>
+</section>
+<section class="parallax-two">
+    <div class="hero-content">
+        <h2>Discover More</h2>
+    </div>
+</section>
+<section class="parallax-three">
+    <div class="hero-content">
+        <h2>Connect with Us</h2>
+    </div>
+</section>

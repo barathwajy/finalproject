@@ -1,0 +1,180 @@
+<!-- <div class="grid-container">
+        <h1 class="mat-h1">Subscriber Dashboard 1</h1>
+        <mat-content fxLayoutWrap>
+
+        <mat-grid-list cols="2" rowHeight="2:1" >
+            <mat-grid-tile colspan="1" rowspan="1" class="a1">
+                <mat-card class="dashboard-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            C1  
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="dashboard-card-content">
+                        <div>
+
+                            <app-chart1></app-chart1>
+                            
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="1">
+                <mat-card class="dashboard-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            C2
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="dashboard-card-content">
+                        <div>
+                            
+                            <app-chart2></app-chart2>
+
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+
+        
+        </mat-grid-list>
+    </mat-content>    
+
+</div>
+
+ -->
+
+
+ <div class="page-header">
+    <h3 class="page-title">
+      Subscriber Dashboard
+    </h3>
+    <!-- <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:;">Charts</a></li>
+        <li class="breadcrumb-item active" aria-current="page">ChartJs</li>
+      </ol>
+    </nav> -->
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Mini card </h4>
+            900
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Mini Card</h4>
+          900
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Mini Card</h4>
+          900
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Mini Card</h4>
+          900
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Service Utilization (Stacked Bar)</h4>
+          <!-- <canvas baseChart [type]= "'line'" [datasets]= "lineChartData" [labels]= "lineChartLabels" [options]= ""></canvas> -->
+          <!-- <app-chart1></app-chart1> -->
+          
+          <canvas baseChart [type]="'bar'" [data]= "StackedBarChartData" [options]= "StackedBarChartOptions"></canvas>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card ">
+        <div class="card-body ">
+          <h4 class="card-title">Subscribers vs Time    Area chart(Contract wise)</h4>
+          <!-- <app-chart2></app-chart2> -->
+          <canvas baseChart [type]="'line'" [data]= "lineChart2Data"  [options]= "lineChart2Options"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card align-items-center" >
+        <div class="card-body " style="height: 368px;">
+          <h4 class="card-title">Pie Subscription Type (Contract)</h4>
+            <canvas baseChart [type]= "'pie'" [data]= "lineChart1Data" [options]= "lineChart1Options"></canvas>
+        
+            
+                    <!-- <canvas baseChart [chartType]="'line'" [datasets]="areaChartData" [labels]="areaChartLabels" [options]="areaChartOptions" [colors]="areaChartColors"></canvas> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Day Time Chart Bar chart</h4>
+          <!-- <canvas baseChart [chartType]="'doughnut'" [datasets]="doughnutPieChartData" [labels]="doughnutPieChartLabels" [options]="doughnutPieChartOptions" [colors]="doughnutPieChartColors"></canvas> -->
+          <canvas baseChart [type]="'bar'" [data]= "BarChartData" [options]= "BarChartOptions"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Average Revenue vs Time  Line Chart </h4>
+          <!-- <canvas baseChart [chartType]="'pie'" [datasets]="doughnutPieChartData" [labels]="doughnutPieChartLabels" [options]="doughnutPieChartOptions" [colors]="doughnutPieChartColors"></canvas> -->
+          <canvas baseChart [type]="'line'" [data]= "lineChart3Data" [options]= "lineChart3Options" ></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card align-items-center">
+        <div class="card-body">
+          <h4 class="card-title ">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Churn Rate</h4>
+          <!-- <canvas baseChart [chartType]="'scatter'" [datasets]="scatterChartData" [options]="scatterChartOptions" [colors]="scatterChartColors"></canvas> -->
+          <circle-progress
+          [percent]="circleval"
+          [radius]="126"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#63E189'"
+          [innerStrokeColor]="'rgba(0,255,255,0.2)'"
+          [animation]="true"
+          [animationDuration]="300">
+          </circle-progress>
+        </div>
+      </div>
+    </div>
+
+  </div>

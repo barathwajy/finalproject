@@ -1,0 +1,44 @@
+"""
+
+ datanet()
+  {
+    console.log(this.netdata)
+    
+    this.netdata.forEach(
+      function (values)
+      {
+            if(values.region==="Region A")
+        {
+          
+          // this.region_a_band.push(values.bandwidth_usage)
+          // //console.log(values.bandwidth_usage)
+          // this.region_a_band.push(values.bandwidth_usage)
+          // this.region_a_bitr.push(values.bit_rate)
+          // this.region_a_cset.push(values.call_setup_time)
+          // this.region_a_jitt.push(values.jitter)
+          // this.region_a_latn.push(values.network_latency)
+          // this.region_a_pack.push(values.packet_loss)
+          // this.region_a_time.push(values.timestamp)
+        }
+      }
+    )
+    // this.networkperform.forEach(
+    //   function(values)
+    //   {
+    //     if(values.region==="Region A")
+    //     {
+    //       this.region_a_band.push(values.bandwidth_usage)
+    //       console.log(values.bandwidth_usage)
+    //       // this.region_a_band.push(values.bandwidth_usage)
+    //       // this.region_a_bitr.push(values.bit_rate)
+    //       // this.region_a_cset.push(values.call_setup_time)
+    //       // this.region_a_jitt.push(values.jitter)
+    //       // this.region_a_latn.push(values.network_latency)
+    //       // this.region_a_pack.push(values.packet_loss)
+    //       // this.region_a_time.push(values.timestamp)
+    //     }
+    //   }
+    // )
+  }
+
+"""
