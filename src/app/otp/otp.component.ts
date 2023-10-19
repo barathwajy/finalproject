@@ -18,7 +18,6 @@ import {
   styleUrls: ['./otp.component.css']
 })
 export class OtpComponent {
-
   otpdisplay:number=1;
   setpwddisplay:number=0;
 
@@ -109,8 +108,15 @@ export class OtpComponent {
     //console.log(this.resetPasswordForm);
     console.log(this.resetPasswordForm.value.newPassword);
     
-    this.route.navigate(['/login'])
-
+    
+    this.ds.updatepassword(localStorage.getItem('email'),this.resetPasswordForm.value.newPassword).subscribe((resp:any)=>
+    {
+      if(resp=="password updated")
+      {
+        alert("New Password Updated")
+        this.route.navigate(['/login'])
+      }
+    })
 
 
     if (!this.resetPasswordForm?.valid) {
@@ -124,7 +130,7 @@ export class OtpComponent {
       const matchingControl = formGroup.controls[matchingControlName];
       if (
         matchingControl.errors &&
-        !matchingControl.errors['confirmedValidator']
+        !matchingControl.errors.confirmedValidator
       ) {
         return;
       }
@@ -135,13 +141,6 @@ export class OtpComponent {
       }
     };
   }
-
-
-
-
-
-
-
 
 
 

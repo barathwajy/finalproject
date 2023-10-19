@@ -31,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgChartsModule,
     ChartistModule,
     NgCircleProgressModule,
-    HttpClientModule
+    HttpClientModule,
   ]
   ,
   exports:[Anet1dashComponent,Asubs1dashComponent,

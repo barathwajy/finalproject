@@ -1,1 +1,44 @@
-<p>login works!</p>
+<script src="https://kit.fontawesome.com/72bcc874c6.js"></script>
+<body  >
+  <div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+<div class="wrapper" style="background-color: #6b70d1; margin-left: 480px; width: 350px;margin-top: 50px;">
+  <div class="head">
+    <h1 style="font-weight: bold; 
+    font-family:  	Copperplate;  text-shadow: 6px 4px 8px rgba(0, 0, 0, 0.3); transform: skewX(-2deg); font-size: 30px;">Welcome back!</h1>
+  </div>
+
+  <!-- Email input -->
+  <div  class="input-field" >
+    <i  class="fa-solid fa-envelope"></i>
+    <input class="emailid"   type="email" placeholder="Username" class="form-control" [(ngModel)]="email1"  [ngModelOptions]="{standalone: true}" >
+  </div>
+
+  <!-- Password input -->
+  <div class="input-field">
+    <i class="fa-solid fa-lock"></i>
+    <input type="password" id="form1Example2" class="form-control" placeholder="Password" [(ngModel)]="password"
+    [ngModelOptions]="{standalone: true}">
+  </div>
+​
+  <div class="btn">
+    <button type="submit" (click)="onSubmit()">Log In</button>
+  </div>
+​
+  <div class="footer">
+    <span><a  routerLink="/forgot-password">Forgot Password?</a> or <a href="#">Sign Up</a></span>
+  </div>
+</div>
+</ul>
+</div>
+</body>

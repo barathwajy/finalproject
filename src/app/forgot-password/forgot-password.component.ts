@@ -47,14 +47,14 @@ export class ForgotPasswordComponent {
           console.log(otpsend)
           console.log(typeof(otpsend))
           this.ds.setotpforgetpass(otpsend)
-          this.router.navigate(['/otp'])
+          this.router.navigate(['/otp-set'])
           // if(this.otpstatus.length==6)
           {
             // this.router.naviagte(['/otp']);
             //this.ds.setotpforgetpass(response)
             //console.log(response)
             //console.log(typeof(response))
-            
+            localStorage.setItem("email",this.email)
           }
       }
     )

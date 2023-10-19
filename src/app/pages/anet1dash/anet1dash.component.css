@@ -16,3 +16,19 @@
   font-family: sans-serif;
 
 }
+
+
+.card-body{
+  background-color: #1B2431;
+  
+ }
+ 
+ .card-title
+ {
+   color: aliceblue;
+ }
+
+ .card{
+  border-color: white;
+  background-color: #1B2431;
+ }

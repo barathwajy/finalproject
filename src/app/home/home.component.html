@@ -1,35 +1,96 @@
-<header class="header">
-    <div class="login-section">
-        <!-- <a href="#" class="login-button">Login</a> -->
-        <!-- <a></a> -->
-        <button class="login-button" (click)="toggleLoginForm()">Login</button>
-        <div class="overlay" [style.display]="showLoginForm ? 'flex' : 'none'">
 
-            <app-newlog></app-newlog>
+<body>
+    <header class="header">
+        <div class="login-section">
+            <!-- <button class="login-button" (click)="toggleLoginForm()">Login</button> -->
+            <div class="overlay" [style.display]="showLoginForm ? 'flex' : 'none'">
+                <app-newlog></app-newlog>
+            </div>
+        </div>
+        <!-- <nav>
+<ul>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <section class="parallax-one">
+        <div class="hero-content">
+            <h1 style="margin-top:-190px">Welcome to the Telecomm Dashboard</h1>
+            <!-- <p style="margin-top: 90px;">Unlock Insights, Make Informed Decisions</p> -->
+            <button routerLink="/login" class="cta-button" style="margin-top: 50px;">Get Started</button>
+        </div>
+
         
-          </div>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#">About Us</a></li>
-        </ul>
-    </nav>
-</header>
-<section class="parallax-one">
-    <div class="hero-content">  
-        <h1>Welcome to the Telecomm Dashboard</h1>
-        <p>Efficiently manage your telecommunication network.</p>
-        <a routerLink="/login" class="cta-button">Get Started</a>
+    </section>
+
+    <!-- <section class="card-section">
         
-    </div>
-</section>
+    </section> -->
+
 <section class="parallax-two">
-    <div class="hero-content">
-        <h2>Discover More</h2>
-    </div>
-</section>
-<section class="parallax-three">
-    <div class="hero-content">
-        <h2>Connect with Us</h2>
-    </div>
-</section>
+        <div class="hero-content">
+            <h2 style="margin-left: 40px; margin-top: -50px;">Discover More
+            </h2>
+            <br><br><br>
+             <div class="card" style="width: 300px; height: 270px;" >
+                
+                <div class="cardmini" style="width: 270px; height: 200px; color: rgb(188, 105, 3);" >
+                    <h1 style="font-size: 25px;color: #FFC727;font-weight: 600;font-style: italic;font: script;margin-right: -20px;">Futuristic</h1>
+                    <img src="assets/cards_final (2).png " style="margin-top: -50px;width: 200px;height: 180px;border-radius: 25px;">
+                    <!-- Card Content 4 -->
+                </div>
+            <!-- Card Content 4 -->
+        </div>
+        <div class="card" style="width: 300px; height: 270px;">
+            <!-- Card Content 5 -->
+            <div class="cardmini" style="width: 270px; height: 200px; color: rgb(188, 105, 3);" >
+                <h1 style="font-size: 25px;color: #C87FFF   ;font-weight: 600;font-style: italic;font: script;margin-right: -20px;">Network</h1>
+                    <img src="assets/try.png" alt="" style="margin-top: -30px;width: 200px;height: 180px;border-radius: 25px;">
+                <!-- Card Content 4 -->
+            </div>
+        </div>
+        <div class="card" style="width: 300px; height: 270px;">
+            <div class="cardmini" style="width: 270px; height: 200px; color: rgb(188, 105, 3);" >
+                <h1 style="font-size: 25px;color: #FFC727;font-weight: 600;font-style: italic;font: script;margin-right: -20px;">Subscriber</h1>
+                    <img src="assets/try.png" alt="" style="margin-top: -50px; width: 200px;height: 180px;border-radius: 25px;">
+                <!-- Card Content 4 -->
+            </div>
+            <!-- Card Content 6 -->
+        </div>
+        </div>
+
+       
+    </section>
+
+    <!-- <section class="card-section">
+        
+    </section> -->
+    <section class="parallax-three">
+        <div class="hero-content">
+            <h2 style="margin-left: 40px; margin-top: -50px;">Connect with Us</h2>
+            <br><br><br>
+            <!-- <div class="card" style="width: 300px; height: 270px;">
+
+                <div class="cardmini" style="width: 270px; height: 200px; color: rgb(188, 105, 3);" >
+                    <h1 style="font-size: 25px;color: white;font-weight: 600;">Futuristic</h1>
+                    <img src="assets/c1.png" alt="" style="margin-top: -50px; width: 200px;height: 180px;border-radius: 25px;;">
+                </div>
+            </div>
+            <div class="card" style="width: 300px; height: 270px;">
+                <div class="cardmini" style="width: 270px; height: 200px; color: rgb(188, 105, 3);" >
+                    <h1 style="font-size: 25px;color: white;font-weight: 600;">Futuristic</h1>
+                    <img src="assets/c1.png" alt="" style="margin-top: -50px; width: 270px;height: 200px;">
+                </div>
+            </div>
+            <div class="card" style="width: 300px; height: 270px;">
+                <div class="cardmini" style="width: 270px; height: 200px; color: rgb(188, 105, 3);" >
+                    <h1 style="font-size: 25px;color: white;font-weight: 600;">Futuristic</h1>
+                    <img src="assets/c1.png" alt="" style="margin-top: -50px; width: 270px;height: 200px;">
+                </div>
+            </div> -->
+        </div>
+
+      
+       
+    </section>
+</body>

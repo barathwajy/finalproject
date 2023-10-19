@@ -32,6 +32,7 @@ import { OtpComponent } from './otp/otp.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,8 @@ import { FormsModule }   from '@angular/forms';
       animationDuration: 300,
     }
     )
+    ,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

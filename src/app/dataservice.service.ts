@@ -12,11 +12,20 @@ export class DataserviceService {
   login:string='login';
   otp:string;
   otpfromback:string;
+  loginstatus: number=0;
   constructor(private http:HttpClient) { }
 
   emailforgotfromback:string;
 
+  setloginstatus(loginstatus:number)
+  {
+    this.loginstatus=loginstatus;
+  }
 
+  getloginstatus()
+  {
+    return this.loginstatus;
+  }
 
   sendotp(email:any)
   {
@@ -53,5 +62,10 @@ export class DataserviceService {
   getotpfromback()
   {
     return this.otpfromback
+  }
+  
+  updatepassword(email:string,password:string)
+  {
+    return this.http.put(this.baseurl+'updatepassword/'+email+'/'+password,{})
   }
 }

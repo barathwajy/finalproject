@@ -45,3 +45,21 @@ mat-card{
   display: flex;
   flex-direction: column;
 }
+
+
+
+
+.card-body{
+  background-color: #1B2431;
+  color:aliceblue;
+ }
+ 
+ .card-title
+ {
+   color: aliceblue;
+ }
+
+ .card{
+  border-color: white;
+  background-color: #1B2431;
+ }

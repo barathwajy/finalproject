@@ -45,11 +45,10 @@
 
  -->
 
-
  <div class="page-header">
-    <h3 class="page-title">
+    <!-- <h3 class="page-title">
       Subscriber Dashboard
-    </h3>
+    </h3> -->
     <!-- <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="javascript:;">Charts</a></li>
@@ -61,9 +60,9 @@
   <div class="row">
     <div class="col-sm-3 grid-margin stretch-card">
       <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Mini card </h4>
-            900
+        <div class="card-body" >
+          <h4 class="card-title">Total Customers </h4>
+             {{totalcustomers}} 
         </div>
       </div>
     </div>
@@ -71,8 +70,8 @@
     <div class="col-sm-3 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Mini Card</h4>
-          900
+          <h4 class="card-title">Current Customers</h4>
+           {{currentcustomers}}
         </div>
       </div>
     </div>
@@ -80,16 +79,16 @@
     <div class="col-sm-3 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Mini Card</h4>
-          900
+          <h4 class="card-title">Customers Churned</h4>
+           {{churnedcustomers}}
         </div>
       </div>
     </div>
     <div class="col-sm-3 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Mini Card</h4>
-          900
+          <h4 class="card-title">New Joinees</h4>
+           {{newjoinedcustomers}}
         </div>
       </div>
     </div>
@@ -100,21 +99,21 @@
     <div class="col-lg-6 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Service Utilization (Stacked Bar)</h4>
+          <h4 class="card-title">Service Utilization</h4>
           <!-- <canvas baseChart [type]= "'line'" [datasets]= "lineChartData" [labels]= "lineChartLabels" [options]= ""></canvas> -->
           <!-- <app-chart1></app-chart1> -->
           
-          <canvas baseChart [type]="'bar'" [data]= "StackedBarChartData" [options]= "StackedBarChartOptions"></canvas>
+          <canvas baseChart [type]="'bar'" [data]= "serviceutiltime" [options]= "serviceutiloptions"></canvas>
         </div>
       </div>
     </div>
     
     <div class="col-lg-6 grid-margin stretch-card">
-      <div class="card ">
+      <div class="card " style="background-color: #1B2431;">
         <div class="card-body ">
-          <h4 class="card-title">Subscribers vs Time    Area chart(Contract wise)</h4>
+          <h4 class="card-title">Subscribers vs Time   </h4>
           <!-- <app-chart2></app-chart2> -->
-          <canvas baseChart [type]="'line'" [data]= "lineChart2Data"  [options]= "lineChart2Options"></canvas>
+          <canvas baseChart [type]="'line'" [data]= "subscribertimedata"  [options]= "subscribertimeoptions"></canvas>
         </div>
       </div>
     </div>
@@ -123,11 +122,11 @@
   <br>
 
   <div class="row">
-    <div class="col-lg-6 grid-margin stretch-card">
-      <div class="card align-items-center" >
+    <div class="col-lg-6 grid-margin stretch-card" >
+      <div class="card align-items-center" style="background-color: #1B2431; border-color:white;" >
         <div class="card-body " style="height: 368px;">
-          <h4 class="card-title">Pie Subscription Type (Contract)</h4>
-            <canvas baseChart [type]= "'pie'" [data]= "lineChart1Data" [options]= "lineChart1Options"></canvas>
+          <h4 class="card-title"> Subscription Type </h4>
+            <canvas baseChart [type]= "'pie'" [data]= "contractdata" [options]= "contractoptions"></canvas>
         
             
                     <!-- <canvas baseChart [chartType]="'line'" [datasets]="areaChartData" [labels]="areaChartLabels" [options]="areaChartOptions" [colors]="areaChartColors"></canvas> -->
@@ -138,9 +137,9 @@
     <div class="col-lg-6 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Day Time Chart Bar chart</h4>
+          <h4 class="card-title">Day Time Chart</h4>
           <!-- <canvas baseChart [chartType]="'doughnut'" [datasets]="doughnutPieChartData" [labels]="doughnutPieChartLabels" [options]="doughnutPieChartOptions" [colors]="doughnutPieChartColors"></canvas> -->
-          <canvas baseChart [type]="'bar'" [data]= "BarChartData" [options]= "BarChartOptions"></canvas>
+          <canvas baseChart [type]="'bar'" [data]= "daytimedata" [options]= "daytimeoptions"></canvas>
         </div>
       </div>
     </div>
@@ -152,9 +151,9 @@
     <div class="col-lg-6 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Average Revenue vs Time  Line Chart </h4>
+          <h4 class="card-title">Average Revenue Per Customers vs Time </h4>
           <!-- <canvas baseChart [chartType]="'pie'" [datasets]="doughnutPieChartData" [labels]="doughnutPieChartLabels" [options]="doughnutPieChartOptions" [colors]="doughnutPieChartColors"></canvas> -->
-          <canvas baseChart [type]="'line'" [data]= "lineChart3Data" [options]= "lineChart3Options" ></canvas>
+          <canvas baseChart [type]="'line'" [data]= "revenuetimedata" [options]= "revenuetimeoptions" ></canvas>
         </div>
       </div>
     </div>
@@ -170,6 +169,8 @@
           [innerStrokeWidth]="8"
           [outerStrokeColor]="'#63E189'"
           [innerStrokeColor]="'rgba(0,255,255,0.2)'"
+          [titleColor]="'white'"
+          [unitsColor]="'white'"
           [animation]="true"
           [animationDuration]="300">
           </circle-progress>
