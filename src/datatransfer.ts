@@ -45,6 +45,7 @@ export class subscriber_data
    churnReason:string|undefined
    churnCategory:string|undefined
 
+
 }
 
 

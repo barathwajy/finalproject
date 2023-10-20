@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { OtpComponent } from './otp/otp.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PostdataComponent } from './postdata/postdata.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path:'nav',
     component:NavBarComponent
+  },
+  {
+    path:'postdata',
+    component:PostdataComponent
   }
 ];
 

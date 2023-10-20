@@ -250,8 +250,9 @@ export class AfutdashComponent {
       this.churndata={
         labels:this.arrchurn,
         datasets:[
-          {label:'',data:this.arrchurncount,}
+          {label:'',data:this.arrchurncount}
         ],
+        
       }
       
       this.churnoptions={
@@ -261,7 +262,18 @@ export class AfutdashComponent {
           legend:{
             display:false
           }
-        }      }
+        },
+        scales:{
+          y:{
+            ticks:{
+              color:"rgba(255,255,255,0.7)",
+              font:{
+                style:'initial'
+              }
+            }
+          }
+        } 
+           }
 
     })
 

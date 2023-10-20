@@ -1,0 +1,217 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+
+<div class="center">
+    <h2 style="color: antiquewhite;font-family: lato;">
+        Post Subscriber Data
+    </h2>
+</div>
+
+<br>
+
+<div class="container">
+    <form [formGroup]="subscriberForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+
+            <div class="form-group col-lg-6 ">
+                <label for="customerID">Customer ID:</label>
+                <input type="text" id="customerID" formControlName="customerID" required><br>
+            </div>
+            
+            <div class="form-group col-lg-6">
+                <label for="dateofJoining">Date of Joining:</label>
+                <input type="text" id="dateofJoining" formControlName="dateofJoining"><br>
+    
+            </div>
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-lg-6">
+                <label for="onlineSecurity">Online Security:</label>
+                <input type="text" id="onlineSecurity" formControlName="onlineSecurity"><br>
+        
+            </div>
+
+            <div class="form-group col-lg-6">
+                <label for="onlineBackup">Online Backup:</label>
+                <input type="text" id="onlineBackup" formControlName="onlineBackup"><br>        
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="form-group col-lg-6">
+                <label for="deviceProtectionPlan">Device Protection Plan:</label>
+                <input type="text" id="deviceProtectionPlan" formControlName="deviceProtectionPlan"><br>
+        
+            </div>
+
+            <div class="form-group col-lg-6">
+                <label for="premiumTechSupport">Premium Tech Support:</label>
+                <input type="text" id="premiumTechSupport" formControlName="premiumTechSupport"><br>
+        
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="form-group col-lg-6">
+                <label for="streamingTV">Streaming TV:</label>
+                <input type="text" id="streamingTV" formControlName="streamingTV"><br>
+        
+            </div>
+
+            <div class="form-group col-lg-6">
+
+                <label for="streamingMovies">Streaming Movies:</label>
+                <input type="text" id="streamingMovies" formControlName="streamingMovies"><br>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="form-group col-lg-6">
+
+                <label for="totalLongDistanceCharges">Total Long Distance Charges:</label>
+                <input type="number" id="totalLongDistanceCharges" formControlName="totalLongDistanceCharges"><br>
+        
+            </div>
+
+            <div class="form-group col-lg-6">
+                <label for="totalRefunds">Total Refunds:</label>
+                <input type="number" id="totalRefunds" formControlName="totalRefunds"><br>
+        
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="form-group col-lg-6">
+                <label for="customerStatus">Customer Status:</label>
+                <input type="text" id="customerStatus" formControlName="customerStatus"><br>
+        
+            </div>
+
+            <div class="form-group col-lg-6">
+
+                <label for="offer">Offer:</label>
+                <input type="text" id="offer" formControlName="offer"><br>
+        
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="form-group col-lg-6">
+      
+                <label for="totalCharges">Total Charges:</label>
+                <input type="number" id="totalCharges" formControlName="totalCharges"><br>
+            
+            </div>
+
+            <div class="form-group col-lg-6">
+                <label for="totalRevenue">Total Revenue:</label>
+                <input type="number" id="totalRevenue" formControlName="totalRevenue"><br>
+            
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="form-group col-lg-6">
+                <label for="contract">Contract:</label>
+                <input type="text" id="contract" formControlName="contract"><br>
+        
+            </div>
+
+            <div class="form-group col-lg-6">
+
+                <label for="tenureinMonths">Tenure in Months:</label>
+                <input type="number" id="tenureinMonths" formControlName="tenureinMonths"><br>        
+                
+                
+            </div>
+
+        </div>
+
+
+
+      
+
+
+  
+    
+  
+    
+     
+      
+  
+
+  
+
+  
+      
+      
+      
+  
+      
+  
+     
+        <div class="center">
+            <button type="submit" style="align-self: center;">Submit</button>
+
+        </div>
+  
+
+
+      <label for="totalExtraDataCharges" [hidden]="true">Total Extra Data Charges:</label>
+      <input type="number" id="totalExtraDataCharges" formControlName="totalExtraDataCharges" [hidden]="true"><br>
+  
+      <label for="internetService" [hidden]="true">Internet Service:</label>
+      <input type="text" id="internetService" formControlName="internetService" [hidden]="true"><br>
+  
+      <label for="phoneService" [hidden]="true">Phone Service:</label>
+      <input type="text" id="phoneService" formControlName="phoneService" [hidden]="true"><br>
+  
+      <label for="internetType" [hidden]="true">Internet Type:</label>
+      <input type="text" id="internetType" formControlName="internetType" [hidden]="true"><br>
+     
+      <label for="multipleLines" [hidden]="true">Multiple Lines:</label>
+      <input type="text" id="multipleLines" formControlName="multipleLines" [hidden]="true"><br>
+      
+  
+      <label for="streamingMusic" [hidden]="true">Streaming Music:</label>
+      <input type="text" id="streamingMusic" formControlName="streamingMusic" [hidden]="true"><br>
+
+      <label for="unlimitedData" [hidden]="true">Unlimited Data:</label>
+      <input type="text" id="unlimitedData" formControlName="unlimitedData" [hidden]="true"><br>
+  
+      <label for="monthlyCharge" [hidden]="true">Monthly Charge:</label>
+      <input type="number" id="monthlyCharge" formControlName="monthlyCharge" [hidden]="true"><br>
+  
+      <label for="churnReason" [hidden]="true">Churn Reason:</label>
+      <input type="text" id="churnReason" formControlName="churnReason" [hidden]="true"><br>
+  
+      <label for="churnCategory" [hidden]="true">Churn Category:</label>
+      <input type="text" id="churnCategory" formControlName="churnCategory" [hidden]="true"><br>
+
+    </form>
+  </div>
+  

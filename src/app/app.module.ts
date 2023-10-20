@@ -31,6 +31,7 @@ import { OtpComponent } from './otp/otp.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
+import { PostdataComponent } from './postdata/postdata.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { FormsModule }   from '@angular/forms';
     BardlogComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    OtpComponent
+    OtpComponent,
+    PostdataComponent
   ],
   imports: [
     BrowserModule,

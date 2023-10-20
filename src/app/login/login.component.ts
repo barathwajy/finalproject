@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { DataserviceService } from '../dataservice.service';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,6 +16,7 @@ export class LoginComponent {
   email1:any;
   otp:any;
   constructor(private ds:DataserviceService, private route:Router,private appcomp:AppComponent){}
+
   onSubmit() {
     this.ds.login1(this.email1, this.password).subscribe(
       (response) => {

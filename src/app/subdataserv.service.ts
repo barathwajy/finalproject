@@ -20,6 +20,11 @@ export class SubdataservService {
     return this.subhttp.get<subscriber_data[]>("http://localhost:9095/subdata");
   }
 
+  public save(subscribers_datas:subscriber_data)
+  {
+    return this.subhttp.post<subscriber_data>("http://localhost:9095/postsubdata",subscribers_datas);
+  }
+
 
 
 }
