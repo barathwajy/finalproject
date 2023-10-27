@@ -10,6 +10,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import Swal from 'sweetalert2';
 // import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -51,13 +52,32 @@ export class OtpComponent {
       //console.log(this.otpfromdb)
       if(otpfromservice==this.otpbyuser)
       {
-        alert("Validated")
+        
+        Swal.fire(
+          {
+             icon:'warning',
+            title:'OTP Verified ',
+            text:"Kindly Enter the new password",
+            didOpen:function()
+            {
+              Swal.showLoading();
+            },
+            timer:2000,
+            
+            
+
+          }
+        )
         this.otpdisplay=0;
         this.setpwddisplay=1;
         //console.log(this.ds.getotpforgetpass)
       }
       else{
-        alert("incorrect otp")
+       
+        Swal.fire('Check Entered OTP?',
+        'Are You sure the OTP you entered is correct?',
+        'question')
+        //alert("incorrect otp")
         //console.log(this.ds.getotpforgetpass)
 
       }
@@ -113,7 +133,13 @@ export class OtpComponent {
     {
       if(resp=="password updated")
       {
-        alert("New Password Updated")
+        Swal.fire(
+          'Success!',
+          'Your Password has been updated successfully',
+          'success'
+        )
+
+        //alert("New Password Updated")
         this.route.navigate(['/login'])
       }
     })

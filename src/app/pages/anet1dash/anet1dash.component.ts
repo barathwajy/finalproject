@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Anet1dashComponent implements OnInit{
 
+  selectednumbers=10;
+
   selectedregion='Region A';
   
   bandwidthData: ChartData<'line'>;
@@ -77,7 +79,32 @@ export class Anet1dashComponent implements OnInit{
   region_d_bitr:number[]=[];
   region_d_cset:number[]=[];
 
+  region_e_time:string[]=[];
+  region_e_band:number[]=[];
+  region_e_latn:number[]=[];
+  region_e_pack:number[]=[];
+  region_e_jitt:number[]=[];
+  region_e_bitr:number[]=[];
+  region_e_cset:number[]=[];
  
+  region_f_time:string[]=[];
+  region_f_band:number[]=[];
+  region_f_latn:number[]=[];
+  region_f_pack:number[]=[];
+  region_f_jitt:number[]=[];
+  region_f_bitr:number[]=[];
+  region_f_cset:number[]=[];
+  
+
+  region_g_time:string[]=[];
+  region_g_band:number[]=[];
+  region_g_latn:number[]=[];
+  region_g_pack:number[]=[];
+  region_g_jitt:number[]=[];
+  region_g_bitr:number[]=[];
+  region_g_cset:number[]=[];
+  
+
   
   netdata:any;
   networkperform:networkperformance[]
@@ -102,6 +129,13 @@ export class Anet1dashComponent implements OnInit{
       this.selectedregion=value;
       console.log(this.selectedregion)
       this.chartrender();
+  }
+
+  onSelected1(value:string):void{
+
+    this.selectednumbers = parseInt(value)
+    console.log(this.selectednumbers)
+    this.chartrender();
   }
 
   ngOnInit() :void
@@ -185,6 +219,58 @@ export class Anet1dashComponent implements OnInit{
           this.region_c_pack.push(item.packet_loss)
 
         }
+        else if(item.region==="Region D")
+        {
+          const a = item.timestamp.split(" ")
+          this.region_d_time.push(a.at(0))
+
+          this.region_d_band.push(item.bandwidth_usage)
+          this.region_d_bitr.push(item.bit_rate)
+          this.region_d_cset.push(item.call_setup_time)
+
+          this.region_d_jitt.push(item.jitter)
+          this.region_d_latn.push(item.network_latency)
+          this.region_d_pack.push(item.packet_loss) 
+        }
+        else if(item.region==="Region E")
+        {
+          const a = item.timestamp.split(" ")
+          this.region_e_time.push(a.at(0))
+
+          this.region_e_band.push(item.bandwidth_usage)
+          this.region_e_bitr.push(item.bit_rate)
+          this.region_e_cset.push(item.call_setup_time)
+
+          this.region_e_jitt.push(item.jitter)
+          this.region_e_latn.push(item.network_latency)
+          this.region_e_pack.push(item.packet_loss)
+        }
+        else if(item.region==="Region F")
+        {
+          const a = item.timestamp.split(" ")
+          this.region_f_time.push(a.at(0))
+
+          this.region_f_band.push(item.bandwidth_usage)
+          this.region_f_bitr.push(item.bit_rate)
+          this.region_f_cset.push(item.call_setup_time)
+
+          this.region_f_jitt.push(item.jitter)
+          this.region_f_latn.push(item.network_latency)
+          this.region_f_pack.push(item.packet_loss)
+        }
+        else if(item.region==="Region G")
+        {
+          const a = item.timestamp.split(" ")
+          this.region_g_time.push(a.at(0))
+
+          this.region_g_band.push(item.bandwidth_usage)
+          this.region_g_bitr.push(item.bit_rate)
+          this.region_g_cset.push(item.call_setup_time)
+
+          this.region_g_jitt.push(item.jitter)
+          this.region_g_latn.push(item.network_latency)
+          this.region_g_pack.push(item.packet_loss)
+        }
 
 
       })
@@ -227,12 +313,62 @@ export class Anet1dashComponent implements OnInit{
 
       }
 
+      else if(this.selectedregion==="Region D")
+      {
+        this.region_r_band=this.region_d_band
+        this.region_r_bitr=this.region_d_bitr
+        this.region_r_cset=this.region_d_cset
+        this.region_r_jitt=this.region_d_jitt
+        this.region_r_latn=this.region_d_latn
+        this.region_r_pack=this.region_d_pack
+      
+        this.region_r_time=this.region_d_time
+
+      }
+      else if(this.selectedregion==="Region E")
+      {
+        this.region_r_band=this.region_e_band
+        this.region_r_bitr=this.region_e_bitr
+        this.region_r_cset=this.region_e_cset
+        this.region_r_jitt=this.region_e_jitt
+        this.region_r_latn=this.region_e_latn
+        this.region_r_pack=this.region_e_pack
+        
+        this.region_r_time=this.region_e_time
+
+      }
+      else if(this.selectedregion==="Region F")
+      {
+        this.region_r_band=this.region_f_band
+        this.region_r_bitr=this.region_f_bitr
+        this.region_r_cset=this.region_f_cset
+        this.region_r_jitt=this.region_f_jitt
+        this.region_r_latn=this.region_f_latn
+        this.region_r_pack=this.region_f_pack
+      
+        this.region_r_time=this.region_f_time
+
+      }
+      else if(this.selectedregion==="Region G")
+      {
+        this.region_r_band=this.region_g_band
+        this.region_r_bitr=this.region_g_bitr
+        this.region_r_cset=this.region_g_cset
+        this.region_r_jitt=this.region_g_jitt
+        this.region_r_latn=this.region_g_latn
+        this.region_r_pack=this.region_g_pack
+        
+        this.region_r_time=this.region_g_time
+
+      }
+
+
 
       //  Bandwidth Graph 
       this.bandwidthData= {
-        labels: this.region_r_time.slice(this.region_r_band.length-10,this.region_r_band.length),
+        labels: this.region_r_time.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length),
         datasets: [
-          { label: 'Bandwidth', data: this.region_r_band.slice(this.region_r_band.length-10,this.region_r_band.length), tension: 0.5, },
+          { label: 'Bandwidth', data: this.region_r_band.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length), tension: 0.5, },
         ],
         
       };
@@ -246,9 +382,9 @@ export class Anet1dashComponent implements OnInit{
       // Network Latency Graph
 
       this.netlatencyData= {
-        labels: this.region_r_time.slice(this.region_r_band.length-10,this.region_r_band.length),
+        labels: this.region_r_time.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length),
         datasets: [
-          { label: 'Network Latency', data: this.region_r_latn.slice(this.region_r_band.length-10,this.region_r_band.length), tension: 0.5, },
+          { label: 'Network Latency', data: this.region_r_latn.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length), tension: 0.5, },
         ],
         
       };
@@ -262,9 +398,9 @@ export class Anet1dashComponent implements OnInit{
       // Packet Loss Graph
 
       this.packetlossData= {
-        labels: this.region_r_time.slice(this.region_r_band.length-10,this.region_r_band.length),
+        labels: this.region_r_time.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length),
         datasets: [
-          { label: 'Packet Loss', data: this.region_r_pack.slice(this.region_r_band.length-10,this.region_r_band.length), tension: 0.5, },
+          { label: 'Packet Loss', data: this.region_r_pack.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length), tension: 0.5, },
         ],
         
       };
@@ -277,9 +413,9 @@ export class Anet1dashComponent implements OnInit{
       // Jitter Graph
 
       this.jitterData= {
-        labels: this.region_r_time.slice(this.region_r_band.length-10,this.region_r_band.length),
+        labels: this.region_r_time.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length),
         datasets: [
-          { label: 'Jitter Graph', data: this.region_r_jitt.slice(this.region_r_band.length-10,this.region_r_band.length), tension: 0.5, },
+          { label: 'Jitter Graph', data: this.region_r_jitt.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length), tension: 0.5, },
         ],
         
       };
@@ -292,9 +428,9 @@ export class Anet1dashComponent implements OnInit{
       // Bit Rate Graph
 
       this.bitrateData= {
-        labels: this.region_r_time.slice(this.region_r_band.length-10,this.region_r_band.length),
+        labels: this.region_r_time.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length),
         datasets: [
-          { label: 'Bit Rate', data: this.region_r_bitr.slice(this.region_r_band.length-10,this.region_r_band.length), tension: 0.5, },
+          { label: 'Bit Rate', data: this.region_r_bitr.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length), tension: 0.5, },
         ],
         
       };
@@ -307,9 +443,9 @@ export class Anet1dashComponent implements OnInit{
       // Call Setup time Graph
 
       this.callsetuptimeData= {
-        labels: this.region_r_time.slice(this.region_r_band.length-10,this.region_r_band.length),
+        labels: this.region_r_time.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length),
         datasets: [
-          { label: 'Call Setup time', data: this.region_r_cset.slice(this.region_r_band.length-10,this.region_r_band.length), tension: 0.5, },
+          { label: 'Call Setup time', data: this.region_r_cset.slice(this.region_r_band.length-this.selectednumbers,this.region_r_band.length), tension: 0.5, },
         ],
         
       };

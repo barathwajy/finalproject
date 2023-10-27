@@ -17,6 +17,10 @@ export class NavBarComponent {
 
   constructor(private observer: BreakpointObserver, private router: Router) {}
 
+  Logout()
+  {
+    this.router.navigate(['\login'])
+  }
   ngAfterViewInit() {
     this.observer
       .observe(['(max-width: 800px)'])

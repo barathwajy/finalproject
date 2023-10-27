@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DataserviceService } from '../dataservice.service';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -23,13 +24,24 @@ export class LoginComponent {
         
         if(response=="Login Successfull")
         {
+          Swal.fire({
+           icon:'success',
+           title:'You Have now successfully logged in',
+           timer:2000 
+          })
+
           this.ds.setloginstatus(1);
           this.appcomp.logchange();
           this.route.navigate(['/sbd1'])
           
         }
         else{
-          alert("Login Failed")
+          //alert("Login Failed")
+          Swal.fire({icon:'error',
+          title:'Oops',
+          text:'Sorry you have entered wrong credentials',
+
+        })
           this.ds.setloginstatus(0);
         }
 

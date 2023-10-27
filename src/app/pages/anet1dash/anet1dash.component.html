@@ -1,6 +1,19 @@
-<div class="row" >
-    <div class="container ">
-      <select class="" #region (change)= "onSelected(region.value)">
+
+<div class="row ">
+  <div class="container col-lg-2 ">
+          <p style="color: aliceblue;">Select Region</p>
+  </div>
+
+  <div class="container col-lg-2 ">
+    <p style="color: aliceblue;"> Select No of Days</p>
+</div>
+
+</div>
+
+<div class="row" style="margin-top: -30px;" >
+  
+    <div class="container col-lg-1">
+      <select class="form-select form-select-sm" style="width: fit-content;" #region (change)= "onSelected(region.value)">
 
         <option>Region A</option>
         <option>Region B</option>
@@ -13,6 +26,19 @@
       </select>
     </div>
 
+
+<div class="container col-lg-1">
+      <select class="form-select form-select-sm" style="width: fit-content;" #numberofvalue (change)= "onSelected1(numberofvalue.value)">
+
+        <option>7</option>
+        <option>10</option>
+        <option>15</option>
+        <option>30</option>
+        <option>50</option>
+        <option>100</option>
+
+      </select>
+    </div>
 </div>
 
 <div class="row">

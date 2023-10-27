@@ -9,7 +9,7 @@
     </button>
     <span class="texmat"> Omni-Trix - Telecom Admin Dashboard Application</span>
   
-    <button > <mat-icon aria-hidden="true" style="color: #fff; background-color: black;">logout</mat-icon>  </button>
+    <button (click)="Logout()"> <mat-icon aria-hidden="true" style="color: #fff; background-color: black;">logout</mat-icon>  </button>
   </mat-toolbar>
   
   <mat-sidenav-container style="background-color:#1B2431">
@@ -29,18 +29,18 @@
   
       <button mat-button class="menu-button" routerLink="/futd1">
         <mat-icon>timeline</mat-icon>
-        <span class="menutextcolor">Futuristic Dashboard</span>
+        <span class="menutextcolor">Forecasting and Analytics Dashboard</span>
       </button>
       <button mat-button class="menu-button" routerLink="/sbd1">
         <mat-icon>person</mat-icon>
-        <span class="menutextcolor">Subscriber Dashboard 1</span>
+        <span class="menutextcolor">Subscriber Dashboard</span>
       </button>
       <button mat-button class="menu-button" routerLink="/ntd1">
-        <mat-icon>local_post_office</mat-icon>
+        <mat-icon>network_check</mat-icon>
         <span class="menutextcolor">Network Dashboard</span>
       </button>
       <button mat-button class="menu-button" routerLink="/postdata">
-        <mat-icon>network_check</mat-icon>
+        <mat-icon>local_post_office</mat-icon>
         <span class="menutextcolor">PostData</span>
       </button>
   
